@@ -20,7 +20,7 @@ import addonHandler
 addonHandler.initTranslation()
 
 loaded=None
-playing=True
+playing=False
 
 class player(threading.Thread):
 	# The tone playback must be performed in a separate thread to avoid lagging.
@@ -30,14 +30,18 @@ class player(threading.Thread):
 		self.toneData=toneData
 
 	def run(self):
+		global playing
+		line=0
 		for p in self.toneData:
 			if not playing: break
 			try:
+				line+=1
 				tones.beep(int(p[0]), int(p[1]))
 				time.sleep(float(p[2]))
 			except ValueError:
 				# Translators: This message will be spoken by NVDA if there's an error with tone data playback.
-				ui.message(_("Woops! I found an error while playing tone data file, some values are missing or incorrect. Please correct any errors and try again."))
+				ui.message(_("Woops! I found an error on line %d while playing tone data file, some values are missing or incorrect. Please correct any errors and try again."%line))
+		if line>=len(self.toneData): playing=False
 
 class toneData(object):
 	# Used for loading and playing back tone data files.
@@ -64,8 +68,10 @@ class toneData(object):
 		f.close()
 
 	def play(self):
+		global playing
 		tonePlayer=player(self._entries)
 		tonePlayer.start()
+		playing=True
 
 class loadToneDataDialog(gui.SettingsDialog):
 	# Translators: Title of the dialog for loading tone data files.
@@ -178,6 +184,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if loaded is None:
 			# Translators: This message will be spoken by NVDA if user tries to play the tone data, but no tone data was loaded.
 			ui.message(_("Please load tone data file first."))
+			return
+		if playing:
 			return
 		t=toneData(os.path.join(os.path.dirname(__file__), 'tones', loaded))
 		playing=True
