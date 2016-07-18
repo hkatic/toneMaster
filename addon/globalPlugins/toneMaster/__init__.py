@@ -15,6 +15,7 @@ import time
 import threading
 import gui
 import wx
+import globalVars
 import addonHandler
 addonHandler.initTranslation()
 
@@ -101,6 +102,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super(globalPluginHandler.GlobalPlugin, self).__init__()
+		if globalVars.appArgs.secure:
+			return
 		self.menu=gui.mainFrame.sysTrayIcon.toolsMenu
 		self.tmMenu=wx.Menu()
 		self.tmSubMenu=self.menu.AppendSubMenu(self.tmMenu,
