@@ -21,7 +21,7 @@ addon_info = {
 To begin, go to NVDA menu->Tools->Tone Master.
 Press NVDA+Alt+T to play loaded tone data file. Press NVDA+Alt+Shift+T to stop playback."""),
 	# version
-	"addon_version" : "1.0",
+	"addon_version" : "1.1",
 	# Author(s)
 	"addon_author" : u"Hrvoje Katić <hrvojekatic@gmail.com>",
 	# URL for the add-on documentation support
