@@ -59,6 +59,7 @@ When you open a folder with .tdf files, you can then load them in your text edit
 * Improved: Error messages are now more user-friendly.
 * Improved: Certain addon features such as opening tones folder or editing tone data files in Notepad are now disallowed on secure screens.
 * Improved: User will be notified by NVDA if tone data playback is stopped.
+* Fixed: Disallowed playback of tone data while the one is already playing.
 
 ## Changes for 1.0
 
