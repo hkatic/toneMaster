@@ -152,8 +152,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			pass
 
 	def OnNewToneData(self, evt):
+		if globalVars.appArgs.secure:
+			return
 		global loaded
-		newToneDataDialog=wx.TextEntryDialog(gui.mainFrame, _("Enter file name:"), _("New Tone Data File"))
+		newToneDataDialog=wx.TextEntryDialog(gui.mainFrame,
+		# Translators: A message which prompts the user to enter tone data file name in New Tone Data File dialog.
+		_("Enter file name:"),
+		# Translators: Title of the dialog for creating new tone data file.
+		_("New Tone Data File"))
 		res=newToneDataDialog.ShowModal()
 		if res==wx.ID_OK:
 			if newToneDataDialog.GetValue():
@@ -169,6 +175,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gui.mainFrame._popupSettingsDialog(loadToneDataDialog)
 
 	def OnEditToneData(self, evt):
+		if globalVars.appArgs.secure:
+			return
 		if loaded is None:
 			# Translators: This message will be spoken by NVDA if user tries to edit tone data, but no tone data was loaded.
 			ui.message(_("Please load tone data file first."))
@@ -177,6 +185,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		p=subprocess.Popen(["notepad.exe", editFile])
 
 	def OnOpenTonesFolder(self, evt):
+		if globalVars.appArgs.secure:
+			return
 		try:
 			os.startfile(os.path.join(os.path.dirname(__file__), 'tones'))
 		except WindowsError:
@@ -193,27 +203,33 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		t=toneData(os.path.join(os.path.dirname(__file__), 'tones', loaded))
 		playing=True
 		t.play()
+	# Translators: Input help mode message for Play Tone Data command.
 	script_playToneData.__doc__=_("Plays currently loaded tone data if everything is ok.")
 
 	def script_stopToneData(self, gesture):
 		global playing
 		playing=False
+	# Translators: Input help mode message for Stop Tone Data playback command.
 	script_stopToneData.__doc__=_("Stops playback for currently loaded tone data if any tone data is playing.")
 
 	def script_newToneData(self, gesture):
 		wx.CallAfter(self.OnNewToneData, None)
+	# Translators: Input help mode message for New Tone Data command.
 	script_newToneData.__doc__=_("Opens a new blank tone data file in Notepad for editing.")
 
 	def script_editToneData(self, gesture):
 		wx.CallAfter(self.OnEditToneData, None)
+	# Translators: Input help mode message for Edit Tone Data command.
 	script_editToneData.__doc__=_("Opens currently loaded tone data file in Notepad for editing.")
 
 	def script_loadToneData(self, gesture):
 		wx.CallAfter(self.OnLoadToneDataDialog, None)
+	# Translators: Input help mode message for Load Tone Data command.
 	script_loadToneData.__doc__=_("Opens a dialog that lets you choose one of your available tone data files to be loaded for playback.")
 
 	def script_openTonesFolder(self, gesture):
 		wx.CallAfter(self.OnOpenTonesFolder, None)
+	# Translators: Input help mode message for Open Tones Folder command.
 	script_openTonesFolder.__doc__=_("Opens a folder with tone data files where you should also save them in order to be located by Tone Master.")
 
 	__gestures={
