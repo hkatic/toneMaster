@@ -31,17 +31,20 @@ class player(threading.Thread):
 
 	def run(self):
 		global playing
-		line=0
+		tone=0
 		for p in self.toneData:
 			if not playing: break
 			try:
-				line+=1
+				tone+=1
 				tones.beep(int(p[0]), int(p[1]))
 				time.sleep(float(p[2]))
 			except ValueError:
 				# Translators: This message will be spoken by NVDA if there's an error with tone data playback.
-				ui.message(_("Woops! I found an error on line %d while playing tone data file, some values are missing or incorrect. Please correct any errors and try again."%line))
-		if line>=len(self.toneData): playing=False
+				ui.message(_("Woops! I found an error at tone number %d while playing tone data file, some values are missing or incorrect. Please correct any errors and try again. Bad syntax: %s"%(tone, ':'.join(p))))
+				tone=len(self.toneData)
+				break
+		if tone>=len(self.toneData):
+			playing=False
 
 class toneData(object):
 	# Used for loading and playing back tone data files.
