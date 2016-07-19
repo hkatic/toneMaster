@@ -40,7 +40,9 @@ class player(threading.Thread):
 				time.sleep(float(p[2]))
 			except ValueError:
 				# Translators: This message will be spoken by NVDA if there's an error with tone data playback.
-				ui.message(_("Woops! I found an error at tone number %d while playing tone data file, some values are missing or incorrect. Please correct any errors and try again. Bad syntax: %s"%(tone, ':'.join(p))))
+				wx.CallAfter(gui.messageBox, _("""Woops! I found an error at tone number %d while playing tone data file, some values are missing or incorrect.
+Please correct any errors and try again.
+Bad syntax: %s"""%(tone, ':'.join(p))), _("Error"), style=wx.OK | wx.CENTER|wx.ICON_ERROR)
 				tone=len(self.toneData)
 				break
 		if tone>=len(self.toneData):
@@ -65,7 +67,8 @@ class toneData(object):
 				self._entries.append(temp)
 			else:
 				# Translators: This message will be spoken by NVDA if user tries to play the tone data, but tone data that is currently loaded contains errors.
-				ui.message(_("Error in tone data file, please correct any errors and try again. The line containing errors: %s"%line))
+				wx.CallAfter(gui.messageBox, _("""Error while parsing line in tone data file, please correct any errors and try again.
+The line containing errors: %s"""%line), _("Error"), style=wx.OK | wx.CENTER|wx.ICON_ERROR)
 				log.warning("can't parse line '%s'"%line)
 		log.debug("Loaded %d entries." % len(self._entries))
 		f.close()
