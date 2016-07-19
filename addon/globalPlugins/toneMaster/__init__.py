@@ -220,7 +220,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_newToneData(self, gesture):
 		wx.CallAfter(self.OnNewToneData, None)
 	# Translators: Input help mode message for New Tone Data command.
-	script_newToneData.__doc__=_("Opens a new blank tone data file in Notepad for editing.")
+	script_newToneData.__doc__=_("Creates and opens a new blank tone data file in Notepad for editing.")
 
 	def script_editToneData(self, gesture):
 		wx.CallAfter(self.OnEditToneData, None)
