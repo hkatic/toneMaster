@@ -67,14 +67,16 @@ class toneData(object):
 				self._entries.append(temp)
 			else:
 				# Translators: This message will be displayed if user tries to play the tone data, but tone data file currently beeing processed contains errors.
-				wx.CallAfter(gui.messageBox, _("""Error while processing tone data file, please correct any errors and try again.
-The line containing errors: %s"""%line), _("Error"), style=wx.OK | wx.CENTER|wx.ICON_ERROR)
-				log.warning("can't parse line '%s'"%line)
+				wx.CallAfter(gui.messageBox, _("""Error while processing line in tone data file, please correct any errors and try again.
+Bad syntax: %s"""%line), _("Error"), style=wx.OK | wx.CENTER|wx.ICON_ERROR)
 		log.debug("Loaded %d entries." % len(self._entries))
 		f.close()
 
 	def play(self):
 		global playing
+		if len(self._entries) is 0:
+			playing=False
+			return
 		tonePlayer=player(self._entries)
 		tonePlayer.start()
 		playing=True
