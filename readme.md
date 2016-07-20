@@ -69,4 +69,4 @@ When you open a folder with .tdf files, you can then load them in your text edit
 
 * Initial release.
 
-[1]: https://github.com/nvdaaddons/toneMaster/releases/download/v1.1/toneMaster-1.1.nvda-addon
+[1]: https://github.com/nvdaaddons/toneMaster/releases/download/v1.2/toneMaster-1.2.nvda-addon
