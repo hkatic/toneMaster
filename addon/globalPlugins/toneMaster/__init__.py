@@ -40,9 +40,9 @@ class player(threading.Thread):
 				time.sleep(float(p[2]))
 			except ValueError:
 				# Translators: This message will be displayed if there's an error with tone data playback.
-				wx.CallAfter(gui.messageBox, _("""Woops! I found an error at tone number %d while playing tone data file, some values are missing or incorrect.
+				wx.CallAfter(gui.messageBox, _("""Woops! I found an error at tone number {toneNumber} while playing tone data file, some values are missing or incorrect.
 Please correct any errors and try again.
-Bad syntax: %s"""%(tone, ':'.join(p))), _("Error"), style=wx.OK | wx.CENTER|wx.ICON_ERROR)
+Bad syntax: {syntax}""".format(toneNumber=tone, syntax=':'.join(p))), _("Error"), style=wx.OK | wx.CENTER|wx.ICON_ERROR)
 				tone=len(self.toneData)
 				break
 		if tone>=len(self.toneData):
@@ -68,7 +68,7 @@ class toneData(object):
 			else:
 				# Translators: This message will be displayed if user tries to play the tone data, but tone data file currently beeing processed contains errors.
 				wx.CallAfter(gui.messageBox, _("""Error while processing line in tone data file, please correct any errors and try again.
-Bad syntax: %s"""%line), _("Error"), style=wx.OK | wx.CENTER|wx.ICON_ERROR)
+Bad syntax: {syntax}""".format(syntax=line)), _("Error"), style=wx.OK | wx.CENTER|wx.ICON_ERROR)
 		log.debug("Loaded %d entries." % len(self._entries))
 		f.close()
 
