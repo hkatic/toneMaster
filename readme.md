@@ -52,6 +52,10 @@ When the dialog for loading tone data file is open, use the arrow keys to select
 
 When you open a folder with .tdf files, you can then load them in your text editor for viewing or editing. However, in order to hear your results on the fly, I highly recommend you to load the file into Tone Master first if possible. Then you can edit the file, save your progress, and after each save you can use play command to hear your last result.
 
+## Changes for 1.3
+
+* Fixed: Fixed compatibility issue with newer NVDA versions.
+
 ## Changes for 1.2
 
 * Fixed: Addressed major issue where selecting an empty tone data, then selecting another one and trying to play it results in tone data not being played.
@@ -69,4 +73,4 @@ When you open a folder with .tdf files, you can then load them in your text edit
 
 * Initial release.
 
-[1]: https://github.com/nvdaaddons/toneMaster/releases/download/v1.2/toneMaster-1.2.nvda-addon
+[1]: https://github.com/nvdaaddons/toneMaster/releases/download/v1.3/toneMaster-1.3.nvda-addon
