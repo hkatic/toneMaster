@@ -107,8 +107,8 @@ class loadToneDataDialog(gui.SettingsDialog):
 
 	def onOk(self, event):
 		global loaded
-		super(loadToneDataDialog, self).onOk(event)
 		loaded=self._filesListbox.GetStringSelection()
+		super(loadToneDataDialog, self).onOk(event)
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: Script category for Tone Master commands in input gestures dialog.
