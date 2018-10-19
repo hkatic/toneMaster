@@ -1,0 +1,231 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: toneMaster 1.3\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
+"POT-Creation-Date: 2018-10-10 11:46+0200\n"
+"PO-Revision-Date: 2018-10-10 11:46+0200\n"
+"Last-Translator: Rémy Ruiz <remyruiz@gmail.com>\n"
+"Language-Team: NVDA add-ons Frenche translation team <remyruiz@gmail.com>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.12\n"
+
+#. Translators: This message will be displayed if there's an error with tone data playback.
+#: addon\globalPlugins\toneMaster\__init__.py:43
+msgid ""
+"Woops! I found an error at tone number {toneNumber} while playing tone data "
+"file, some values are missing or incorrect.\n"
+"Please correct any errors and try again.\n"
+"Bad syntax: {syntax}"
+msgstr ""
+"Woops! J'ai trouvé une erreur au numéro de tonalité {toneNumber} pendant la "
+"lecture du fichier de données de tonalité, certaines valeurs sont manquantes "
+"ou incorrectes.\n"
+"S'il vous plaît veuillez corriger les erreurs et réessayer.\n"
+"Mauvaise syntaxe : {syntax}"
+
+#: addon\globalPlugins\toneMaster\__init__.py:45
+#: addon\globalPlugins\toneMaster\__init__.py:71
+msgid "Error"
+msgstr "Erreur"
+
+#. Translators: This message will be displayed if user tries to play the tone data, but tone data file currently beeing processed contains errors.
+#: addon\globalPlugins\toneMaster\__init__.py:70
+msgid ""
+"Error while processing line in tone data file, please correct any errors and "
+"try again.\n"
+"Bad syntax: {syntax}"
+msgstr ""
+"Erreur lors du traitement de la ligne dans le fichier de données de "
+"tonalité, s'il vous plaît veuillez corriger les erreurs et réessayer.\n"
+"Mauvaise syntaxe : {syntax}"
+
+#. Translators: Title of the dialog for loading tone data files.
+#: addon\globalPlugins\toneMaster\__init__.py:86
+msgid "Load Tone Data"
+msgstr "Charger les données de tonalité"
+
+#. Translators: Help message for Load Tone Data dialog.
+#: addon\globalPlugins\toneMaster\__init__.py:93
+msgid "Select tone data file you wish to load for playing:"
+msgstr ""
+"Sélectionnez le fichier de données de tonalité que vous souhaitez charger "
+"pour la lecture :"
+
+#. Translators: A label for files list in Load Tone Data dialog.
+#: addon\globalPlugins\toneMaster\__init__.py:98
+msgid "Files"
+msgstr "Fichiers"
+
+#. Translators: Script category for Tone Master commands in input gestures dialog.
+#. Translators: The name of Tone Master add-on submenu.
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+#: addon\globalPlugins\toneMaster\__init__.py:115
+#: addon\globalPlugins\toneMaster\__init__.py:125 buildVars.py:17
+msgid "Tone Master"
+msgstr "Tone Master"
+
+#. Translators: The tooltip text for Tone Master add-on submenu.
+#: addon\globalPlugins\toneMaster\__init__.py:127
+msgid "Tone data player"
+msgstr "Lecteur de données de tonalité"
+
+#. Translators: The name for an item of Tone Master add-on submenu that opens a new blank tone data file in Notepad for editing.
+#: addon\globalPlugins\toneMaster\__init__.py:130
+msgid "&New tone data file"
+msgstr "&Nouveau fichier de données de tonalité"
+
+#. Translators: The tooltip text for an item of Tone Master add-on submenu that opens a new blank tone data file in Notepad for editing.
+#: addon\globalPlugins\toneMaster\__init__.py:132
+msgid "Opens a new blank tone data file in Notepad for editing"
+msgstr ""
+"Ouvre un nouveau fichier de données de tonalité vierge dans le Bloc-notes "
+"pour l'édition"
+
+#. Translators: The name for an item of Tone Master add-on submenu that opens a dialog for loading tone data files.
+#: addon\globalPlugins\toneMaster\__init__.py:136
+msgid "&Load tone data file..."
+msgstr "&Charger le fichier de données de tonalité..."
+
+#. Translators: The tooltip text for an item of Tone Master add-on submenu that opens a dialog for loading tone data files.
+#: addon\globalPlugins\toneMaster\__init__.py:138
+msgid "Opens a dialog for loading tone data files to play"
+msgstr ""
+"Ouvre une boîte de dialogue afin de charger les fichiers de données de "
+"tonalité pour la lecture"
+
+#. Translators: The name for an item of Tone Master add-on submenu that opens currently loaded tone data file in Notepad for editing.
+#: addon\globalPlugins\toneMaster\__init__.py:142
+msgid "&Edit tone data file"
+msgstr "&Éditer le fichier de données de tonalité"
+
+#. Translators: The tooltip text for an item of Tone Master add-on submenu that opens currently loaded tone data file in Notepad for editing.
+#: addon\globalPlugins\toneMaster\__init__.py:144
+msgid "Opens currently loaded tone data file in Notepad for editing"
+msgstr ""
+"Ouvre le fichier de données de tonalité actuellement chargé dans le Bloc-"
+"notes pour l'édition"
+
+#. Translators: The name for an item of Tone Master add-on submenu that opens a folder with tone data files.
+#: addon\globalPlugins\toneMaster\__init__.py:148
+msgid "&Open folder with tone data files"
+msgstr "&Ouvrir le dossier avec les fichiers de données de tonalité"
+
+#. Translators: The tooltip text for an item of Tone Master add-on submenu that opens a folder with tone data files.
+#: addon\globalPlugins\toneMaster\__init__.py:150
+msgid "Opens a folder with tone data files in file explorer"
+msgstr ""
+"Ouvre un dossier avec les fichiers de données de tonalité dans l'explorateur "
+"de fichiers"
+
+#. Translators: A message which prompts the user to enter tone data file name in New Tone Data File dialog.
+#: addon\globalPlugins\toneMaster\__init__.py:165
+msgid "Enter file name:"
+msgstr "Entrez le nom du fichier :"
+
+#. Translators: Title of the dialog for creating new tone data file.
+#: addon\globalPlugins\toneMaster\__init__.py:167
+msgid "New Tone Data File"
+msgstr "Nouveau fichier de données de tonalité"
+
+#. Translators: This message will be spoken by NVDA if user tries to edit tone data, but no tone data was loaded.
+#. Translators: This message will be spoken by NVDA if user tries to play the tone data, but no tone data was loaded.
+#: addon\globalPlugins\toneMaster\__init__.py:187
+#: addon\globalPlugins\toneMaster\__init__.py:204
+msgid "Please load tone data file first."
+msgstr ""
+"S'il vous plaît veuillez charger le fichier de données de tonalité en "
+"premier."
+
+#. Translators: Input help mode message for Play Tone Data command.
+#: addon\globalPlugins\toneMaster\__init__.py:212
+msgid "Plays currently loaded tone data if everything is ok."
+msgstr "Joue les données de tonalité actuellement chargé si tout est bien."
+
+#. Translators: This message will be spoken by NVDA if user stops playback of tone data.
+#: addon\globalPlugins\toneMaster\__init__.py:218
+msgid "stopped"
+msgstr "arrêté"
+
+#. Translators: Input help mode message for Stop Tone Data playback command.
+#: addon\globalPlugins\toneMaster\__init__.py:220
+msgid ""
+"Stops playback for currently loaded tone data if any tone data is playing."
+msgstr ""
+"Arrête la lecture pour les données de tonalité actuellement chargé si "
+"n'importe quelles données de tonalité sont en cours de lecture."
+
+#. Translators: Input help mode message for New Tone Data command.
+#: addon\globalPlugins\toneMaster\__init__.py:225
+msgid "Creates and opens a new blank tone data file in Notepad for editing."
+msgstr ""
+"Crée et ouvre un nouveau fichier de données de tonalité vierge dans le Bloc-"
+"notes pour l'édition."
+
+#. Translators: Input help mode message for Edit Tone Data command.
+#: addon\globalPlugins\toneMaster\__init__.py:230
+msgid "Opens currently loaded tone data file in Notepad for editing."
+msgstr ""
+"Ouvre le fichier de données de tonalité actuellement chargé dans le Bloc-"
+"notes pour l'édition."
+
+#. Translators: Input help mode message for Load Tone Data command.
+#: addon\globalPlugins\toneMaster\__init__.py:235
+msgid ""
+"Opens a dialog that lets you choose one of your available tone data files to "
+"be loaded for playback."
+msgstr ""
+"Ouvre une boîte de dialogue qui vous permet de choisir un de vos fichiers de "
+"données de tonalité disponible afin d'être  charger pour la lecture."
+
+#. Translators: Input help mode message for Open Tones Folder command.
+#: addon\globalPlugins\toneMaster\__init__.py:240
+msgid ""
+"Opens a folder with tone data files where you should also save them in order "
+"to be located by Tone Master."
+msgstr ""
+"Ouvre un dossier avec les fichiers de données de tonalité où vous devez "
+"également les enregistrer dans l'ordre afin d'être localiser par Tone Master."
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#: buildVars.py:20
+msgid ""
+"Plays musical tunes created from tone data files by using NVDA's beeps.\n"
+"To begin, go to NVDA menu->Tools->Tone Master.\n"
+"Press NVDA+Alt+T to play loaded tone data file. Press NVDA+Alt+Shift+T to "
+"stop playback."
+msgstr ""
+"Jouer des mélodies musicales créé à partir des fichiers de données de "
+"tonalité en utilisant les bips de NVDA.\n"
+"Pour commencer, allez dans le menu NVDA->Outils->Tone Master.\n"
+"Appuyer sur NVDA+Alt+T pour jouer le fichier de données de tonalité chargé. "
+"Appuyer sur NVDA+Alt+Maj+T pour arrêter la lecture."
+
+#~ msgid ""
+#~ "Woops! I found an error at tone number %d while playing tone data file, "
+#~ "some values are missing or incorrect.\n"
+#~ "Please correct any errors and try again.\n"
+#~ "Bad syntax: %s"
+#~ msgstr ""
+#~ "Woops! J'ai trouvé une erreur au numéro de tonalité %d pendant la lecture "
+#~ "du fichier de données de tonalité, certaines valeurs sont manquantes ou "
+#~ "incorrectes.\n"
+#~ "S'il vous plaît veuillez corriger les erreurs et réessayer.\n"
+#~ "Mauvaise syntaxe : %s"
+
+#~ msgid ""
+#~ "Error while processing line in tone data file, please correct any errors "
+#~ "and try again.\n"
+#~ "Bad syntax: %s"
+#~ msgstr ""
+#~ "Erreur lors du traitement de la ligne dans le fichier de données de "
+#~ "tonalité, s'il vous plaît veuillez corriger les erreurs et réessayer.\n"
+#~ "Mauvaise syntaxe : %s"
