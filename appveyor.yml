@@ -1,16 +1,20 @@
-version: "{branch}-{build}"
+version: '{branch}-{build}'
 environment:
- PY_PYTHON: 3.7-32
+  PY_PYTHON: 3.7-32
 install:
-  - py -m pip install --upgrade pip
-  - py -m pip install markdown
-  - py -m pip install -U setuptools
-  - py -m pip install -U wheel
-  - py -m pip install -U scons
+- cmd: >-
+    set PATH=C:\Python37;C:\Python37\Scripts;%PATH%
 
+    python -m pip install -U pip
+
+    pip install wheel
+    
+    pip install scons
+
+    pip install markdown
 build_script:
-  - scons
-  - scons pot
+- cmd: scons
+- cmd: scons pot
 
 artifacts:
   - path: '*.nvda-addon'
