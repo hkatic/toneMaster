@@ -1,7 +1,5 @@
 # -*- coding: UTF-8 -*-
 
-import os
-
 # Build customizations
 # Change this file instead of sconstruct or manifest files, whenever possible.
 
@@ -29,21 +27,27 @@ addon_info = {
 To begin, go to NVDA menu->Tools->Tone Master.
 Press NVDA+Alt+T to play loaded tone data file. Press NVDA+Alt+Shift+T to stop playback."""),
 	# version
-	"addon_version": "1.4",
+	"addon_version": "1.5",
 	# Author(s)
 	"addon_author": "Hrvoje Katić <hrvojekatic@gmail.com>",
 	# URL for the add-on documentation support
-	"addon_url": None,
+	"addon_url": "https://addons.nvda-project.org/",
+	# URL for the add-on repository where the source code can be found
+	"addon_sourceURL": "https://github.com/hkatic/toneMaster",
 	# Documentation file name
 	"addon_docFileName": "readme.html",
 	# Minimum NVDA version supported (e.g. "2018.3.0", minor version is optional)
 	"addon_minimumNVDAVersion": "2019.3",
 	# Last NVDA version supported/tested (e.g. "2018.4.0", ideally more recent than minimum version)
-	"addon_lastTestedNVDAVersion": "2021.3",
+	"addon_lastTestedNVDAVersion": "2023.1",
 	# Add-on update channel (default is None, denoting stable releases,
 	# and for development releases, use "dev".)
 	# Do not change unless you know what you are doing!
 	"addon_updateChannel": None,
+	# Add-on license such as GPL 2
+	"addon_license": "GPL v2",
+	# URL for the license document the ad-on is licensed under
+	"addon_licenseURL": "https://www.gnu.org/licenses/gpl-2.0.html",
 }
 
 # Define the python files that are the sources of your add-on.

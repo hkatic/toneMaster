@@ -52,6 +52,10 @@ When the dialog for loading tone data file is open, use the arrow keys to select
 
 When you open a folder with .tdf files, you can then load them in your text editor for viewing or editing. However, in order to hear your results on the fly, I highly recommend you to load the file into Tone Master first if possible. Then you can edit the file, save your progress, and after each save you can use play command to hear your last result.
 
+## Changes for 1.5
+
+* Fixed: Fixed compatibility issue with NVDA 2022.1 and later versions.
+
 ## Changes for 1.4
 
 * Fixed: Fixed compatibility issue with NVDA 2021.1 and later versions.
@@ -77,4 +81,4 @@ When you open a folder with .tdf files, you can then load them in your text edit
 
 * Initial release.
 
-[1]: https://github.com/hkatic/toneMaster/releases/download/v1.4/toneMaster-1.4.nvda-addon
+[1]: https://github.com/hkatic/toneMaster/releases/download/v1.5/toneMaster-1.5.nvda-addon
